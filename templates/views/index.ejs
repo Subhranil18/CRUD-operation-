@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+    <form id="layoutform" action="/deleteform" method="POST">
+        <table>
+            <tr>
+                <th>language</th>
+                <th>programmer</th>
+                <th>Delete</th>
+            </tr>
+        <% if(layout.recordset.length){ %>
+        <% for(var i=0;i<layout.recordset.length;i++){ %>
+            <tr>
+                <td>
+                    <%= layout.recordset[i].language%>
+                </td>
+                <td>
+                    <%= layout.recordset[i].programmer %>
+                </td>
+                <td>
+                    <button name="<%= layout.recordset[i].id %>" class="btnDelete" >&#10007</button> 
+                </td>
+            </tr>
+        <% } %>
+        <% } else { %>
+                <tr>
+                    <td colspan="4">
+                        No Data to Display
+                    </td>
+                </tr>
+        <% }%>
+        </table>
+    </form> 
+    </div>
+    <br>
+    <div class="addbtncontainer">
+        <a href="/create">
+            <button class='btnAdd'>Add</button>
+        </a>
+        <a href="/create">
+            <img id="fixedImg" height="30" width="30" src="../../img/add.png" alt="add">
+        </a>
+    </div>
+</body>
+</html>

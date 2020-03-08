@@ -1,0 +1,114 @@
+html,body{
+    font-family: "Trebuchet MS",Arial, Helvetica, sans-serif;
+}
+
+.container,.addbtncontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#layoutform{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 80%;
+    font-family: "Trebuchet MS",Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+table td,table th{
+    border:1px solid #ddd;
+    padding: 8px;
+}
+
+table:tr:nth-child(even),table tr .btnDelete{
+    background-color: #f2f2f2;
+}
+
+table tr:hover,table tr:hover .btnDelete{
+    background-color: #ddd;
+}
+
+table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4caf50;
+    color:#ffffff;
+}
+
+input{
+    margin:10px;
+    width: 70%;
+    height: 15px;
+}
+
+input[type=text]{
+    padding:5px;
+}
+
+#postform{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #009688;
+}
+
+#btnsubmit{
+    height: 30px;
+    background: #009688;
+    color:#ffffff;
+    border:none;
+    cursor: pointer;
+}
+
+.btnDelete{
+    background: #fff;
+    font-family: "Trebuchet MS",Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-color: none;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.btnAdd{
+    font-family: "Trebuchet MS",Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 30px;
+    background:#009688;
+    color:#ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.btnAdd a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+#fixedImg{
+    position: fixed;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:762px){
+    /*for mobile devices*/
+    table{
+        width: 100%;
+    }
+
+    #fixedImg{    
+        top: 50px;     
+        right: 5px;
+    }
+}
